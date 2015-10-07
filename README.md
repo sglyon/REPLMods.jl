@@ -35,7 +35,7 @@ UnderGuidePosition          manual_color_key             zoomslider
 Gadfly> foobar = 100
 100
 
-Gadfly>foobar
+Gadfly> foobar
 100
 
 Gadfly> # now I hit delete to return to julia REPL
