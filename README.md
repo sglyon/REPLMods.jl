@@ -18,7 +18,7 @@ julia> REPLMods.build_module_repl(Gadfly)
 
 julia> # Now I press `.` and prompt switches to `Gadfly>`
 
-Gadfly>Guide.
+Gadfly>Guide.  # then I hit tab to show a list of completions
 Annotation                  XLabel                       over_guide_position
 BottomGuidePosition         XTicks                       render_colorkey_title
 ColorKey                    YLabel                       render_continuous_color_key
@@ -32,7 +32,20 @@ RightGuidePosition          eval                         xticks
 Title                       layout_guides                ylabel
 TopGuidePosition            left_guide_position          yticks
 UnderGuidePosition          manual_color_key             zoomslider
-Gadfly>Guide.
+Gadfly> foobar = 100
+100
+
+Gadfly>foobar
+100
+
+Gadfly> # now I hit delete to return to julia REPL
+
+julia> foobar
+ERROR: UndefVarError: foobar not defined
+
+julia> Gadfly.foobar
+100
+
 ```
 
 I could have chosen something other than `.`:
