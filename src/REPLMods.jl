@@ -24,7 +24,7 @@ end
 
 function build_module_repl(mod::Module; key::Char='.',
                            color::AbstractString=Base.text_colors[:cyan],
-                           prompt::AbstractString=string(mod, ">"))
+                           prompt::AbstractString=string(mod, "> "))
     # extract REPL and  modal interface, if any
     mirepl = isdefined(Base.active_repl,:mi) ? Base.active_repl.mi :
                                                Base.active_repl
